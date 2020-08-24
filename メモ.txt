@@ -1,0 +1,33 @@
+npx create-react-app giga-school
+の後にしたことメモ
+
+
+■IEに対応させる
+https://www.petitmonte.com/ruby/react-app-polyfill.html
+
+yarn add react-app-polyfill
+
+index.js
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
+
+※対応してもデプロイしないとieで表示できない?
+
+■msal.jsをインストール
+
+npm install --save msal
+
+msal.jsとは?
+Microsoft Authentication Library (MSAL) の概要
+https://docs.microsoft.com/ja-jp/azure/active-directory/develop/msal-overview
+
+セキュリティで保護された Web API にアクセスする目的で、開発者は Microsoft ID プラットフォーム エンドポイントからトークンを取得できます。 これらの Web API には、Microsoft Graph、その他の Microsoft API、サード パーティの Web API、または、独自の Web API が含まれます。
+
+■@azure/cosmosをインストール
+
+npm install @azure/cosmos
+
+■メモ
+
+参考
+C:\_app\gapi_test
