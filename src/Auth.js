@@ -20,7 +20,7 @@ const loginRequest = {
 };
 
 const tokenRequest = {
-  scopes: ["https://gigadomain.onmicrosoft.com/api/demo.read"]
+  scopes: ["https://gigasyunkaiv4.onmicrosoft.com/api/demo.read"]
 };
 
 const _msal = new Msal.UserAgentApplication(msalConfig);
@@ -73,6 +73,11 @@ export default class Auth extends React.Component {
         document.getElementById('dataEmails').innerText = this.state.claims.emails[0];
         document.getElementById('dataTfp').innerText = this.state.claims.tfp;
         //★★2020.8.12 mi.hiraba add end
+
+        //_msal.acquireTokenSilent(tokenRequest).then(token => {
+        //  console.log('★★★');
+        //  console.log(token);
+        //  });
 
       }).catch(error => {
         console.log(error);
